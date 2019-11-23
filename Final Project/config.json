@@ -2,9 +2,9 @@
     "model" : {
         "backend":              "Full Yolo",
         "input_size":           416,
-        "anchors":              [0.57273, 0.677385, 1.87446, 2.06253, 3.33843, 5.47434, 7.88282, 3.52778, 9.77052, 9.16828],
+        "anchors":              [0.83,1.08, 2.11,2.34, 3.56,4.58, 7.02,7.29, 11.77,11.24],
         "max_box_per_image":    10,        
-        "labels":               ["Apple","Banana","Broccoli","Cabbage","Carrot","Grape","Mango","Orange","Pear","Pineapple","Potato","Radish","Squash","Strawberry","Watermelon","Zucchini"]
+        "labels":               ["Apple","Banana","Broccoli","Cabbage","Carrot","Mango","Orange","Pear","Pineapple","Potato","Strawberry","Watermelon","Zucchini"]
     },
 
     "train": {
