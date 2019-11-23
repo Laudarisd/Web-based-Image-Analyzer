@@ -82,6 +82,20 @@ def _main_(args):
 
         video_reader.release()
         video_writer.release()  
+    elif image_path == '.webcam':
+        
+        cap = cv2.VideoCapture(0)
+        
+        while True:
+            ret,image = cap.read()
+            #print(frame.shape)
+            #cv2.imshow('frame', image)
+            boxes = yolo.predict(image)
+            image = draw_boxes(image, boxes, config['model']['labels'])
+            cv2.imshow('frame', image)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+     
     else:
         image = cv2.imread(image_path)
         boxes = yolo.predict(image)
